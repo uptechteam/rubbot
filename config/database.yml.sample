@@ -1,0 +1,23 @@
+default: &default
+  host: localhost
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  encoding: utf8
+
+development:
+  <<: *default
+  database: rubbot_development
+  username:
+  password:
+
+test:
+  <<: *default
+  database: rubbot_test
+  username:
+  password:
+
+production:
+  <<: *default
+  database: rubbot_production
+
