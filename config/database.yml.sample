@@ -3,19 +3,21 @@ default: &default
   adapter: postgresql
   pool: 5
   timeout: 5000
+  encoding: utf8
 
 development:
   <<: *default
-  database:
+  database: rubbot_development
   username:
-  password: 1
+  password:
 
 test:
   <<: *default
-  database:
+  database: rubbot_test
   username:
-  password: 1
+  password:
 
 production:
   <<: *default
   database: rubbot_production
+
